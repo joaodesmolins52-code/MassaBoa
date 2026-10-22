@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: #12303e;
+}
+
+#svgInterativo {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+#svgInterativo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#LoginArea {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 24px clamp(24px, 6vw, 96px);
+    box-sizing: border-box;
+}
+
+#InputCadastro {
+    width: min(380px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+#InputCadastro input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: inherit;
+    color: #12303e;
+    background: #ffffff;
+    border: 2px solid #cfe3dc;
+    border-radius: 10px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#InputCadastro input::placeholder {
+    color: #7a9a93;
+}
+
+#InputCadastro input:hover {
+    border-color: #6fc7a4;
+}
+
+#InputCadastro input:focus {
+    outline: none;
+    border-color: #2a8574;
+    box-shadow: 0 0 0 4px rgba(42, 133, 116, 0.18);
+}
+
+@media (max-width: 800px) {
+    #LoginArea {
+        justify-content: center;
+    }
+
+    #InputCadastro {
+        padding: 28px;
+        background: rgba(255, 255, 255, 0.94);
+        border-radius: 16px;
+        box-shadow: 0 12px 40px rgba(18, 48, 62, 0.25);
+    }
+}
