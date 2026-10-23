@@ -18,3 +18,9 @@
     --content-width: 1200px;
     --header-height: 82px;
 }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--serif);
+}
