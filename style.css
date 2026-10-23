@@ -18,3 +18,31 @@
     --content-width: 1200px;
     --header-height: 82px;
 }
+
+
+header{
+    position: static;
+    z-index: 9999;
+
+    min-height: var(--header-height);
+    gap: 32px;
+    justify-content: space-between;
+
+    padding: 14px;
+    background: #f8f0e5;
+
+    border-bottom: 1px solid var(--line);
+    background-color: blur(18px);   
+}
+
+#logo{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    color: var(--cacau);
+
+    font-family: var(--serif);
+    font-size: 1.65rem;
+    
+}
