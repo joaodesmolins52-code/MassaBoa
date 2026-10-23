@@ -1,0 +1,20 @@
+:root {
+    color-scheme: light;
+    --paper: #f8f3ec;
+    --paper-light: #fffdf9;
+    --paper-warm: #efe3d7;
+    --ink: #2c1b16;
+    --ink-soft: #59463e;
+    --muted: #75645b;
+    --cacau: #3e2119;
+    --cacau-dark: #28130f;
+    --caramel: #a56c48;
+    --rose: #b9666b;
+    --rose-soft: #f3e1dc;
+    --line: rgba(62, 33, 25, .13);
+    --shadow-soft: 0 22px 60px rgba(57, 30, 21, .09);
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+    --sans: "DM Sans", Arial, sans-serif;
+    --content-width: 1200px;
+    --header-height: 82px;
+}
