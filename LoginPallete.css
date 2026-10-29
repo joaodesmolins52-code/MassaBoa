@@ -6,8 +6,24 @@ html, body {
 body {
     font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
     color: #12303e;
+
+    background-image: url(images/Padaria.jpg);
+    background-repeat: no-repeat;
+
+    object-fit: cover;
+    object-position: center;
+
+    height: 100vh;
 }
 
+button{
+    padding: 10px 10px;
+    border-radius: 10px;
+
+    border: none;
+    background-color: #ff7f00;
+    color: white;
+}
 #svgInterativo {
     position: fixed;
     inset: 0;
@@ -21,6 +37,8 @@ body {
 }
 
 #LoginArea {
+    display: flex;
+    justify-content: end;
     position: relative;
     z-index: 1;
     min-height: 100vh;
@@ -30,17 +48,17 @@ body {
     box-sizing: border-box;
 }
 
-#InputCadastro {
+#InputLogin {
     width: min(380px, 100%);
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-#InputCadastro input {
+#InputLogin input {
     width: 100%;
     box-sizing: border-box;
-    padding: 14px 16px;
+    padding: 20px 20px;
     font-size: 1rem;
     font-family: inherit;
     color: #12303e;
@@ -50,15 +68,15 @@ body {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-#InputCadastro input::placeholder {
+#InputLogin input::placeholder {
     color: #7a9a93;
 }
 
-#InputCadastro input:hover {
+#InputLogin input:hover {
     border-color: #6fc7a4;
 }
 
-#InputCadastro input:focus {
+#InputLogin input:focus {
     outline: none;
     border-color: #2a8574;
     box-shadow: 0 0 0 4px rgba(42, 133, 116, 0.18);
@@ -69,10 +87,12 @@ body {
         justify-content: center;
     }
 
-    #InputCadastro {
+    #InputLogin
+ {
         padding: 28px;
         background: rgba(255, 255, 255, 0.94);
         border-radius: 16px;
         box-shadow: 0 12px 40px rgba(18, 48, 62, 0.25);
     }
 }
+

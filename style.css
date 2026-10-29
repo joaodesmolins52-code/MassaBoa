@@ -9,6 +9,7 @@
     --cacau: #3e2119;
     --cacau-dark: #28130f;
     --caramelo: #a56c48;
+    --claromelo: #dda380;
     --rose: #b9666b;
     --rose-soft: #f3e1dc;
     --line: rgba(62, 33, 25, .13);
@@ -19,83 +20,72 @@
     --header-height: 82px;
 }
 
+body{
+    margin: 0;
+    padding: 0;
 
-header{
+    background-color: var(--claromelo);
+}
+header {
     position: static;
-    z-index: 9999;
-
-    min-height: var(--header-height);
-    gap: 32px;
-    justify-content: space-between;
-
-    padding: 14px;
-    background: #f8f0e5;
-
-    border-bottom: 1px solid var(--line);
-    background-color: blur(18px);   
-}
-
-#logo{
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    color: var(--cacau);
-
-    font-family: var(--serif);
-    font-size: 1.65rem;
-    font-weight: 700;
-}
-
-#logo::after{
-    content: "Padaria .  Feito com afeto";
-
-    color: var(--muted);
-
-    font-family: var(--sans);
+    
+    height: 10%;
+    width: 100%;
+    padding-bottom: 10px;
+    
+    background-color: var(--cacau);
 }
 
 header ul {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    
-    gap: 14px;
-    margin: 0;
-    padding: 0;
-
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
 }
 
-header ul a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 42px;
-    color: var(--escuro-soft);
-
-    text-decoration: none;
-    transition: color var(--rose-soft);
-}
-
-header ul li{
-    position: absolute;
-    background: var(--caramelo);
-
-    transition: .2s;
-}
-
-header ul a:hover{
+a{
     color: var(--caramelo);
-    transform: translateY(5px);
+    text-decoration: none;
+    transition: .5s;
+}
+
+a:hover{
+    color: var(--claromelo);
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+button{
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: none;
+
+    background-color: var(--cacau);
+    color: var(--rose-soft);
+
+    font-family: var(--serif);
 }
 
 #IntroBox{
-    position: relative;
-
     display: flex;
-    align-items: center;
-    padding: var(--content-width);
-    background: var(--paper);
+    flex-direction: column;
+
+    background-color: var(--muted);
+}
+
+#PersonaArea{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#PersonaArea img{
+    height: 200px;
+    width: 200px;
 }
