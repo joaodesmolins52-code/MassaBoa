@@ -1,0 +1,292 @@
+:root {
+    --cor-fundo: #F6F0E6;
+    --cor-fundo-secundario: #EFE2CF;
+    --cor-superficie: #FBF7F0;
+    --cor-cafe: #47241D;
+    --cor-cafe-escuro: #32170F;
+    --cor-terracota: #B75E43;
+    --cor-terracota-claro: #D68B6D;
+    --cor-trigo: #f8f1e6;
+    --cor-texto: #39251E;
+    --cor-texto-secundario: #77685D;
+    --cor-borda: #E1D4C3;
+    --cor-branco: #FFFFFF;
+    --cor-sucesso: #73765A;
+    --cor-erro: #A33C2F;
+    --rose: rgb(232, 173, 170);
+    --rose-claro: rgb(214, 185, 183);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 110px;
+    padding: 15px 6%;
+    background-color: var(--cor-superficie);
+    border-bottom: 1px solid var(--cor-borda);
+    flex-shrink: 0;
+}
+
+#LogoProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3px;
+    color: var(--cor-cafe);
+}
+
+#LogoProdutos h1 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--cor-cafe);
+}
+
+#LogoProdutos h3 {
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1.5px;
+    color: var(--cor-texto-secundario);
+}
+
+#ItensHeader {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    list-style: none;
+}
+
+header li {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    color: var(--cor-cafe);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--cor-terracota);
+}
+
+#introProdutos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+    width: 100%;
+    min-height: calc(100vh - 110px);
+    padding: 70px 8%;
+    background-image:
+        linear-gradient(90deg,
+            rgba(50, 23, 15, 0.82) 0%,
+            rgba(50, 23, 15, 0.58) 38%,
+            rgba(50, 23, 15, 0.08) 100%),
+        /* eu gosto muito desse tipo de efeito, ele meio q da uma cortina */
+        url("imagens/cafeteria1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#introProdutos h1 {
+    max-width: 500px;
+    color: var(--cor-branco);
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#introProdutos p {
+    max-width: 460px;
+    color: var(--cor-trigo);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#introProdutos div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btnCardapio,
+.btnDelivery {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btnCardapio {
+    background-color: transparent;
+    border-color: var(--cor-trigo);
+    color: var(--cor-trigo);
+}
+
+.btnCardapio:hover {
+    background-color: var(--cor-trigo);
+    color: var(--cor-cafe);
+}
+
+.btnDelivery {
+    background-color: var(--cor-cafe-escuro);
+    border-color: var(--cor-cafe-escuro);
+    color: var(--cor-branco);
+}
+
+.btnDelivery:hover {
+    background-color: var(--cor-terracota);
+    border-color: var(--cor-terracota);
+    color: var(--cor-branco);
+}
+
+#CategoriaArea {
+    width: 100%;
+
+    padding: 35px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo);
+}
+
+#CategoriasArea h1 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: var(--cor-cafe);
+}
+
+#CategoriasArea h3 {
+    margin-top: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--cor-texto-secundario);
+}
+
+#CategoriasArea>div {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#CategoriasArea ul {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 25px;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+#CategoriasArea a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+
+    color: var(--cor-cafe);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#CategoriasArea a:hover {
+    color: var(--cor-terracota);
+}
+
+#CategoriasArea img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+#CategoriasArea img:hover {
+    transform: scale(1.06);
+}
+
+#História{
+    width: 100%;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    
+    background-color: #eecdac;
+}
+
+#História h1{
+    font-family: Georgia, serif;
+    font-size: 28px;
+    color: #5f5d4b;
+}
+#HistóriaImg{
+    width: 45%;
+    height: 30vh;
+
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("imagens/Fatia.jpg");
+    background-color: #eecdac;
+
+
+    background-position: right;
+    background-size: contain;
+    margin-left: 100px;
+}
+#HistóriaTXT{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}

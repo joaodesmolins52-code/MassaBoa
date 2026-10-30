@@ -1,139 +1,101 @@
-
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boa Massa</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Boa massa</title>
 </head>
 
 <body>
-    <header>
-        <div id="logoBox">
-            <a href="#IntroBox" id="logo"> 
-                <img src="" alt="">
-            </a>
-        </div>
-        <ul>
-            <li>
-                <a href="#IntroBox">
-                    HOME
-                </a>
-            </li>
-            <li>
-                <a href="LoginPallete.html">
-                    DIFERENCIAIS
-                </a>
-            </li>
-            <li>
-                <a href="#TodayFood">
-                    DESTAQUE DO DIA
-                </a>
-            </li>
-            <li>
-                <a href="#LocalArea">
-                    NOSSA HISTÓRIA
-                </a>
-            </li>
-            <li>
-                <a href="#TodayFood">
-                    CARDÁPIO
-                </a>
-            </li>
-        </ul>
-    </header>
-
-    <section id="IntroBox">
-        <div id="IntroContainer">
-            <h2>
-                PADARIA ARTESANAL · FEITA TODOS OS DIAS
-            </h2>
-            <h1>
-                O sabor de casa, feito com carinho.
-            </h1>
-            <h1>
-                Da primeira fornada do dia aos doces <br> que tornam cada momento especial, <br> preparamos sabores frescos com ingredientes <br> escolhidos e cuidado em cada detalhe.
-            </h1>
-            <button>
-                Conheça nossos sabores
-            </button>
-        </div>
-    </section>
-
-    <section id="PersonaArea">
+    <section id="BemVindo">
         <h1>
-            Why Choose Us?
+            Bem-vindo de volta!
         </h1>
         <p>
-            Mais do que receitas, entregamos cuidado em cada etapa — da escolha dos ingredientes ao momento em que o sabor chega à sua mesa.
+            A gente acredita que todo dia fica melhor com um bom pão
         </p>
-
-        <div>
-            <h1>
-                Ingredientes selecionados
-            </h1>
-            <img src="images/pão1.jpg" alt="Pães artesanais preparados com atenção aos ingredientes">
-            <button>
-                Saiba mais
-            </button>
-        </div>
-        <div>
-            <ul>
-                <h1>
-                    Fresquinho todos os dias
-                </h1>
-                <img src="images/croassaint1.jpg" alt="Croissants dourados recém-assados">
-                <button>
-                    Veja nossas fornadas
-                </button>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <h1>
-                    Feito com carinho
-                </h1>
-                <img src="images/sonho1.jpg" alt="Doces de padaria preparados para compartilhar">
-                <button>
-                    Descubra nossos sabores
-                </button>
-            </ul>
-        </div>
+        <br>
+        <p>
+            Entre em sua conta e mantenha seus pedidos, favoritos e preferências sempre por perto
+        </p>
     </section>
-<!-- 
-    <section id="TodayFood">
-        <div>
-            <h1>
-                Um destaque especial para adoçar o seu dia
-            </h1>
-
+    <section id="loginArea">
+        <div id="Inputlogin">
             <p>
-                Receitas cheias de sabor, preparadas com cuidado e perfeitas para transformar uma pausa simples em um momento especial.
+                ACESSO A SUA CONTA
             </p>
+            <h1>
+                Entre na <br> sua conta
+            </h1>
+            <p>
+                use seu e-mail e senha para continuar.
+            </p>
+            <h2>
+                E-mail
+            </h2>
+            <input type="email" name="email" placeholder="seu@email.com">
+            <h2>
+                Senha
+            </h2>
+            <input type="password" name="Senha" placeholder="Digite sua senha">
 
-            <img src="images/bolo1.jpg" alt="Bolo de chocolate decorado, servido em um prato">
-            <button>
-                Descubra o destaque
-            </button>
+            <div id="LembreArea">
+                <input type="checkbox" id="LembrarCheck">
+                <p>
+                    Lembrar de mim
+                </p>
+
+                <a href="" id="Esqueceu">
+                    Esqueceu sua senha?
+                </a>
+            </div>
+            <button type="submit" class="Entrar" id="Entrar" onclick="Entrar()" >Entrar</button>
+            <h2>
+                Não tem uma conta? <a id="Criar">Criar uma</a>
+            </h2>
         </div>
     </section>
 
-    <section id="LocalArea">
-        <div id="InfoChefs">
-            <h1>
-                Da nossa cozinha para a sua mesa
+    <!-- Cadastre-se -->
+
+    <section id="CriarConta">
+
+        <div id="InputCadastro">
+            <h1 class="InputTXTCadastro">
+                Comece por aqui
             </h1>
-
+            <h1 class="InputTXTCadastro">
+                Crie sua conta
+            </h1>
             <p>
-                Na Boa Massa, acreditamos que os melhores sabores nascem do cuidado com cada detalhe. Nosso propósito é reunir frescor, qualidade e aquele aconchego de uma receita feita com carinho.
+                Preencha seus dadis para acompanhar seus pedidos <br> e guardar seus favoritos.
             </p>
+            <h2>
+                Nome
+            </h2>
+            <input type="text" name="Nome" placeholder="Seu nome">
+            <h2>
+                E-mail
+            </h2>
+            <input type="email" name="email" placeholder="seu@email.com">
+            <h2>
+                Senha
+            </h2>
+            <input type="password" name="SenhaNova" placeholder="Crie uma senha">
+            <h2>
+                Confirmar Senha
+            </h2>
+            <input type="password" name="ConfirmarNovaSenha" placeholder="Repita sua senha">
 
-            <img src="images/moça1.jpg" alt="Preparação cuidadosa de alimentos em uma cozinha">
+            <button type="submit" class="Entrar" id="Entrar" onclick="Entrar()" >Entrar</button>
+
+            <p>Já tem uma conta? <a id="VoltarLogin">Entrar</a></p>
         </div>
+    </section>
 
-        <a href="#TodayFood" class="ProductsArea">Explore nosso cardápio</a>
-    </section> -->
 </body>
+
 </html>

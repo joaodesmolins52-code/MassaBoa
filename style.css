@@ -1,91 +1,398 @@
 :root {
-    color-scheme: light;
-    --paper: #f8f3ec;
-    --paper-light: #fffdf9;
-    --paper-warm: #efe3d7;
-    --escuro: #2c1b16;
-    --escuro-soft: #59463e;
-    --muted: #75645b;
-    --cacau: #3e2119;
-    --cacau-dark: #28130f;
-    --caramelo: #a56c48;
-    --claromelo: #dda380;
-    --rose: #b9666b;
-    --rose-soft: #f3e1dc;
-    --line: rgba(62, 33, 25, .13);
-    --shadow-soft: 0 22px 60px rgba(57, 30, 21, .09);
-    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
-    --sans: "DM Sans", Arial, sans-serif;
-    --content-width: 1200px;
-    --header-height: 82px;
+    --cor-fundo: #F6F0E6;
+    --cor-fundo-secundario: #EFE2CF;
+    --cor-superficie: #FBF7F0;
+    --cor-cafe: #47241D;
+    --cor-cafe-escuro: #32170F;
+    --cor-terracota: #B75E43;
+    --cor-terracota-claro: #D68B6D;
+    --cor-trigo: #f8f1e6;
+    --cor-texto: #39251E;
+    --cor-texto-secundario: #77685D;
+    --cor-borda: #E1D4C3;
+    --cor-branco: #FFFFFF;
+    --cor-sucesso: #73765A;
+    --cor-erro: #A33C2F;
 }
 
-body{
+* {
     margin: 0;
     padding: 0;
-
-    background-color: var(--claromelo);
-}
-header {
-    position: static;
-    
-    height: 10%;
-    width: 100%;
-    padding-bottom: 10px;
-    
-    background-color: var(--cacau);
+    box-sizing: border-box;
 }
 
-header ul {
+body {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
 
-a{
-    color: var(--caramelo);
-    text-decoration: none;
-    transition: .5s;
+#BemVindo {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 12vh 5.5%;
+
+    background-image: url("imagens/PãoLogin.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-a:hover{
-    color: var(--claromelo);
+#BemVindo h1 {
+    max-width: 480px;
+    margin-bottom: 24px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(40px, 4vw, 72px);
+    font-weight: bold;
+    line-height: 0.98;
+
+    color: var(--cor-cafe);
 }
 
-h1{
-    font-size: 30px;
-    font-weight: 300;
+#BemVindo p {
+    max-width: 390px;
+    margin-bottom: 24px;
+
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: var(--cor-cafe);
 }
 
-button{
-    margin: 10px;
-    padding: 10px;
-
-    border-radius: 10px;
-    border: none;
-
-    background-color: var(--cacau);
-    color: var(--rose-soft);
-
-    font-family: var(--serif);
+#BemVindo br {
+    display: none;
 }
 
-#IntroBox{
+#loginArea {
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px 4%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-fundo);
+}
+
+#Inputlogin {
+    width: 100%;
+    max-width: 465px;
+    min-height: 80vh;
+    padding: 45px 40px;
+
     display: flex;
     flex-direction: column;
 
-    background-color: var(--muted);
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid rgba(71, 36, 29, 0.04);
+    border-radius: 10px;
 }
 
-#PersonaArea{
+#Inputlogin p:first-child {
+    margin-bottom: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+
+    color: var(--cor-cafe);
+}
+
+#Inputlogin h1 {
+    margin-bottom: 16px;
+
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 2.8vw, 48px);
+    font-weight: bold;
+    line-height: 1.05;
+
+    color: var(--cor-cafe);
+}
+
+#Inputlogin h1+p {
+    margin-bottom: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--cor-texto-secundario);
+}
+
+#Inputlogin h2 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--cor-cafe);
+}
+
+#Inputlogin input[type="email"],
+#Inputlogin input[type="password"] {
+    width: 100%;
+    min-height: 46px;
+    margin: 0;
+    padding: 12px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+#Inputlogin input[type="email"]:focus,
+#Inputlogin input[type="password"]:focus {
+    border-color: var(--cor-terracota);
+    box-shadow: 0 0 0 3px rgba(183, 94, 67, 0.12);
+}
+
+#LembreArea {
+    width: 100%;
+    margin-top: 19px;
+
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
     gap: 10px;
 }
 
-#PersonaArea img{
-    height: 200px;
-    width: 200px;
+#LembrarCheck {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+
+    accent-color: var(--cor-cafe);
+    flex-shrink: 0;
+}
+
+#LembreArea p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    color: var(--cor-texto-secundario);
+}
+
+#Esqueceu {
+    margin-left: auto;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    white-space: nowrap;
+
+    color: var(--cor-cafe);
+    text-decoration: none;
+}
+
+#Esqueceu:hover {
+    color: var(--cor-terracota);
+    transition: 0.3s;
+}
+
+.Entrar {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 24px;
+    padding: 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+    background-color: var(--cor-cafe);
+
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.Entrar:hover {
+    background-color: var(--cor-cafe-escuro);
+}
+
+.Entrar+h2 {
+    margin-top: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    color: var(--cor-texto);
+}
+
+#Criar {
+    color: var(--cor-terracota);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#Criar:hover {
+    color: var(--cor-sucesso);
+}
+
+#VoltarLogin {
+    color: var(--cor-terracota);
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#VoltarLogin:hover {
+    color: var(--cor-sucesso);
+}
+
+/* Mudar tela */
+
+#CriarConta {
+    display: none;
+    flex: 0 0 50%;
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px 4%;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-fundo);
+}
+
+.InputTXTCadastro {
+    margin-bottom: 16px;
+
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.05;
+
+    color: var(--cor-cafe);
+}
+
+#CriarConta.ativa {
+    display: flex;
+}
+
+#loginArea.escondido {
+    display: none;
+}
+
+#InputCadastro {
+    width: 100%;
+    max-width: 465px;
+    min-height: 80vh;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+#InputCadastro>h2 {
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--cor-cafe);
+}
+
+#InputCadastro p {
+    margin-bottom: 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: var(--cor-texto-secundario);
+}
+
+#InputCadastro input[type="text"],
+#InputCadastro input[type="email"],
+#InputCadastro input[type="password"] {
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 12px 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    color: var(--cor-texto);
+    background-color: var(--cor-superficie);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+#InputCadastro input[type="text"]:focus,
+#InputCadastro input[type="email"]:focus,
+#InputCadastro input[type="password"]:focus {
+    border-color: var(--cor-terracota);
+    box-shadow: 0 0 0 3px rgba(183, 94, 67, 0.12);
+}
+
+#InputCadastro .Entrar {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 22px;
+    padding: 14px;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: var(--cor-branco);
+    background-color: var(--cor-cafe);
+
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+#InputCadastro .Entrar:hover {
+    background-color: var(--cor-cafe-escuro);
+}
+
+#InputCadastro>p:last-child {
+    margin-top: 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: var(--cor-texto-secundario);
 }
