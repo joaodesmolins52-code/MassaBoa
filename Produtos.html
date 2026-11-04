@@ -26,7 +26,7 @@
                     <a href="">Início</a>
                 </li>
                 <li>
-                    <a href="">Delivery</a>
+                    <a href="#Produtos">Delivery</a>
                 </li>
                 <li>
                     <a href="">Cardapio da loja</a>
@@ -35,12 +35,45 @@
                     <a href="">Nossa História</a>
                 </li>
                 <li>
-                    <a href="">Localização</a>
+                    <button id="CarrinhoLink" type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+
+                            <circle cx="9" cy="20" r="1" />
+                            <circle cx="19" cy="20" r="1" />
+                            <path d="M2 3h2l2.4 11.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6L22 7H5" />
+
+                        </svg>
+                    </button>
                 </li>
             </ul>
         </div>
     </header>
 
+
+    <section id="carrinho">
+
+        <div id="IntroCarrinho">
+            <h2>Seu carrinho</h2>
+            <button id="FecharCarrinho" type="button">X</button>
+        </div>
+
+        <div id="ProdutosCarrinho">
+            <p id="CarrinhoVazio">Seu carrinho ainda está vazio.</p>
+        </div>
+
+        <div id="ResumoCarrinho">
+            <div id="LinhaTotalCarrinho">
+                <h3>Total</h3>
+                <h3 id="TotalCarrinho">R$ 0,00</h3>
+            </div>
+
+            <button id="FinalizarPedido" type="button">
+                Finalizar pedido
+            </button>
+        </div>
+
+    </section>
     <section id="introProdutos">
         <h1>
             O sabor de um <br> bom dia esta <br> aqui
@@ -50,18 +83,20 @@
         </p>
 
         <div>
-            <a href="" class="btnDelivery">Pedir delivery</a>
+            <a href="#Produtos" class="btnDelivery">Pedir delivery</a>
             <a href="" class="btnCardapio"> ver cardápio da loja</a>
         </div>
     </section>
 
     <section id="CategoriasArea">
-        <h1>
-            Nossas Categorias
-        </h1>
-        <h3>
-            Encontre o seu favorito e viva o melhor da nossa padaria 
-        </h3>
+        <div id="txtCategoriasArea">
+            <h1>
+                Nossas Categorias
+            </h1>
+            <h3>
+                Encontre o seu favorito e viva o melhor da nossa padaria
+            </h3>
+        </div>
         <div>
             <ul>
                 <li>
@@ -101,112 +136,199 @@
     <section id="História">
         <div id="HistóriaTXT">
 
-      
-        <h3>
-            Nossa História 
-        </h3>
-        <h1>
-            Tudo começa com bons <br> ingredientes, tempo e cuidado
-        </h1>
-        <a href="" id="ConheçaLink"> Conheça nossa História</a>
-    </div>
+
+            <h3>
+                Nossa História
+            </h3>
+            <h1>
+                Tudo começa com bons <br> ingredientes, tempo e cuidado
+            </h1>
+            <a href="" id="ConheçaLink"> Conheça nossa História</a>
+        </div>
         <div id="HistóriaImg">
 
         </div>
     </section>
 
+
     <section id="Produtos">
-        <ul>
-            <li><a href="">
-                <h2>
-                    
-                </h2>
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-        </ul>
-        <ul>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-            <li><a href="">
-                <img src="" alt="">
-                <button></button></a>
-            </li>
-        </ul>
+
+        <div class="CategoriaProdutos">
+
+            <div class="CategoriaTXT">
+                <h2>Doces artesanais</h2>
+                <h4>Pequenos momentos de felicidade, preparados com ingredientes selecionados e muito carinho.</h4>
+            </div>
+        </div>
+        </div>
+
+        <div id="ProdutosListas">
+
+            <ul id="DocesList">
+                <li>
+                    <img src="imagens/Cookies1.jpg" alt="">
+                    <h2>Cookie de chocolate</h2>
+                    <h4>R$ 8,99</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+                <li>
+                    <img src="imagens/Brownie.png" alt="">
+                    <h2>Brownie artesanal</h2>
+                    <h4>R$ 12,00</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+                <li>
+                    <img src="imagens/PaoMel.jpg" alt="">
+                    <h2>Pão de mel</h2>
+                    <h4>R$ 9,50</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+                <li>
+                    <img src="imagens/Cinnamon roll.jpg" alt="">
+                    <h2>Cinnamon roll</h2>
+                    <h4>R$ 14,90</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+                <li>
+                    <img src="imagens/Muffin de chocolate.jpg" alt="">
+                    <h2>Muffin de chocolate</h2>
+                    <h4>R$ 10,00</h4>
+                    <button type="button">Adicionar ao carrinho</button>
+                </li>
+            </ul>
+
+            <div class="CategoriaProdutos">
+                <div class="CategoriaTXT">
+                    <h2>Para qualquer hora do dia</h2>
+                    <h4>Opções quentinhas e saborosas, preparadas para deixar sua pausa ainda melhor.</h4>
+                </div>
+
+                <ul id="SalgadosList">
+                    <li>
+                        <img src="imagens/Croissant.jpg" alt="">
+                        <h2>Croissant</h2>
+                        <h4>R$ 13,90</h4>
+
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="imagens/Coxinha de frango.jpg" alt="">
+                        <h2>Coxinha de frango</h2>
+                        <h4>R$ 8,50</h4>
+
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="imagens/Empada de frango.jpg" alt="">
+                        <h2>Empada de frango</h2>
+                        <h4>R$ 9,00</h4>
+
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="imagens/Pão de queijo.jpg" alt="">
+                        <h2>Pão de queijo</h2>
+                        <h4>R$ 6,00</h4>
+
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+                    <li>
+                        <img src="Imagens/Quiche de queijo.jpg" alt="">
+                        <h2>Quiche de queijo</h2>
+                        <h4>R$ 15,90</h4>
+
+                        <button type="button">Adicionar ao carrinho</button>
+                    </li>
+                </ul>
+
+                <div class="CategoriaProdutos">
+                    <div class="CategoriaTXT">
+                        <h2>O sabor de uma boa fornada</h2>
+                        <h4>Pães artesanais, com ingredientes selecionados, cuidado no preparo e aquele aroma
+                            irresistível.
+                        </h4>
+                    </div>
+
+                    <ul id="PaesList">
+                        <li>
+                            <img src="imagens/Pão artesanal.jpg" alt="">
+                            <h2>Pão artesanal</h2>
+                            <h4>R$ 15,99</h4>
+
+                            <button type="button">Adicionar ao carrinho</button>
+                        </li>
+                        <li>
+                            <img src="imagens/Baguete francesa.jpg" alt="">
+                            <h2>Baguete francesa</h2>
+                            <h4>R$ 12,00</h4>
+
+                            <button type="button">Adicionar ao carrinho</button>
+                        </li>
+                        <li>
+                            <img src="imagens/Pão integral.jpg" alt="">
+                            <h2>Pão integral</h2>
+                            <h4>R$ 18,90</h4>
+
+                            <button type="button">Adicionar ao carrinho</button>
+                        </li>
+                        <li>
+                            <img src="imagens/Brioche.jpg" alt="">
+                            <h2>Brioche</h2>
+                            <h4>R$ 16,50</h4>
+
+                            <button type="button">Adicionar ao carrinho</button>
+                        </li>
+                        <li>
+                            <img src="imagens/Pão de centeio.jpg" alt="">
+                            <h2>Pão de centeio</h2>
+                            <h4>R$ 19,90</h4>
+
+                            <button type="button">Adicionar ao carrinho</button>
+                        </li>
+                    </ul>
+
+                    <div class="CategoriaProdutos">
+                        <div class="CategoriaTXT">
+                            <h2>Um toque doce para terminar</h2>
+                            <h4>Sobremesas especiais, feitas para transformar momentos simples em boas lembranças.</h4>
+                        </div>
+
+                        <ul id="Sobremesaslist">
+                            <li>
+                                <img src="imagens/Bolo artesanal.jpg" alt="">
+                                <h2>Bolo artesanal</h2>
+                                <h4>R$ 15,99</h4>
+
+                                <button type="button">Adicionar ao carrinho</button>
+                            </li>
+                            <li>
+                                <img src="imagens/Torta de limão.jpg" alt="">
+                                <h2>Torta de limão</h2>
+                                <h4>R$ 14,90</h4>
+
+                                <button type="button">Adicionar ao carrinho</button>
+                            </li>
+                            <li>
+                                <img src="imagens/Cheesecake.jpg" alt="">
+                                <h2>Cheesecake</h2>
+                                <h4>R$ 18,00</h4>
+                                <button type="button">Adicionar ao carrinho</button>
+                            </li>
+                            <li>
+                                <img src="imagens/Pudim artesanal.jpg" alt="">
+                                <h2>Pudim artesanal</h2>
+                                <h4>R$ 12,00</h4>
+                                <button type="button">Adicionar ao carrinho</button>
+                            </li>
+                            <li>
+                                <img src="imagens/Tiramisù.jpg" alt="">
+                                <h2>Tiramisù</h2>
+                                <h4>R$ 19,90</h4>
+                                <button type="button">Adicionar ao carrinho</button>
+                            </li>
+                        </ul>
+                    </div>
     </section>
 </body>
+
 </html>
